@@ -24,9 +24,23 @@ class Fibonacci {
     return memo[n];
   }
 
+  public int iterDpFib(int n){
+    int[] memo = new int[n];
+
+    memo[0] = 0;
+    memo[1] = 1;
+    for(int i = 2; i < n; i++){
+      memo[i] = memo[i-1] + memo[i-2];
+    }
+    return memo[n-1] + memo[n-2];
+
+  }
+
+
   public static void main(String[] args) {
     Fibonacci fib = new Fibonacci();
     //System.out.println(fib.FibRec(50));
-    System.out.println(fib.fibMemStart(6));
+    System.out.println(fib.fibMemStart(30));
+    System.out.println(fib.iterDpFib(30));
   }
 }
