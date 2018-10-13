@@ -4,14 +4,6 @@ class MaxSumSubarray {
     int n = nums.length;
     int sum = 0;
     int ans = nums[0];
-    //Check if all negative
-    // for(int i = 1; i < n; i++){
-    //   ans = Math.max(ans, nums[i]);
-    // }
-    //
-    // if(ans < 0){
-    //   return ans;
-    // }
 
     ans = 0;
     for(int i = 0; i< n; i++){
@@ -28,7 +20,7 @@ class MaxSumSubarray {
 
   public static void main(String[] args) {
     MaxSumSubarray mss = new MaxSumSubarray();
-    int[] a = {-2, -5, -1, -8};
+    int[] a = {-5, -1, 6, -8};
     System.out.println(mss.maxSumSubarray(a));
   }
 

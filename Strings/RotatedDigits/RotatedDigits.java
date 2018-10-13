@@ -31,6 +31,10 @@ class RotatedDigits {
   }
 
   public static void main(String[] args) {
+
+    int[] val = new int[1];
+    System.out.println(val[1]);
+
     RotatedDigits rd = new RotatedDigits();
     System.out.println(rd.rotatedDigits(4));
   }
