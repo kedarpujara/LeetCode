@@ -1,0 +1,15 @@
+1. Create the graph in the form of adjacency list 
+2. For each vertex in the graph, 
+    - if it is not visited:
+        -> DFS down until you hit a sink node 
+        -> Mark it visited 
+        -> push that onto the stack
+    - if all of its children have been visited
+        - Mark it as visited
+        -> add it to the stack 
+
+RUNTIME: 
+    -> Visiting all edges and vertices (O(|V| + |E|))
+
+    
+

@@ -1,0 +1,20 @@
+GOAL:
+Shortest path from source node to every other node in the graph
+
+
+SETUP:
+DIST map for each vertex set to inf
+PriorityQueue
+PREV -- what is currently set as it previous 
+
+
+1. Set dist[src] = 0
+2. Push src onto PriorityQueue 
+3. While queue:
+    - curr = pq.pop()
+    - for neighbor of graph[curr]:
+        -> if (dist[u to v] plus dist[u]) < dist[v]
+            - set dist[v] to be dist[u to v] plus dist[u]
+            - Push neighbors/edges onto priority queue
+            - Set prev[v] to be u 
+    
