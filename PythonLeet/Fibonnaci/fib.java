@@ -3,11 +3,11 @@ public class fib {
 	/*** ALGORITHM 1 ***/
 	//In the order of 2^n
 
-	public void printFib(int n){
-		for(int i=1; i <= n; i++){
-			System.out.println(i + ": " + fib(i));
-		}
-	}
+	// public void printFib(int n){
+	// 	for(int i=1; i <= n; i++){
+	// 		System.out.println(i + ": " + fib(i));
+	// 	}
+	// }
 
 	public int fib(int n) {
 		if(n==0)
@@ -22,21 +22,21 @@ public class fib {
 	/***ALGORITHM 2 ***/
 
 
-	public void printAllFib(int n){
-		int[] memo = new int[n+1];
-		for(int i = 0; i < memo.length; i++) {
-			System.out.println(i + ": " + fib(i, memo));
-		}
-	}
+	// public void printAllFib(int n){
+	// 	int[] memo = new int[n+1];
+	// 	for(int i = 0; i < memo.length; i++) {
+	// 		System.out.println(i + ": " + fib(i, memo));
+	// 	}
+	// }
 
-	public int fib(int n, int[] memo){
+	public int fibonacci_memo(int n, int[] memo){
 		if(n==0) 
 			return 0;
 		else if(n==1)
 			return 1;
 		else
 			memo[n] = memo[n-1] + memo[n-2];
-
+		System.out.println(memo);
 		return memo[n];
 	}
 
@@ -44,7 +44,10 @@ public class fib {
 
 	public static void main(String[] args){
 		fib fibon = new fib();
-		System.out.println(fibon.fib(8));
+		int n = 10;
+		int[] memo = new int[n];
+		System.out.println(fibon.fibonacci_memo(n, memo));
+		//System.out.println(fibon.fib(8));
 		//fibon.
 	}	
 
